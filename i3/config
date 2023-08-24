@@ -121,7 +121,10 @@ bindsym $mod+a exec --no-startup-id firefox https://www.youtube.com/watch?v=jfKf
 exec_always --no-startup-id xrandr --output HDMI-0 --rate 144.00
 
 #transparent window
-bindsym $mod+t exec --no-startup-id transparent_window.sh
+bindsym $mod+t exec --no-startup-id python3 /home/jacob/dotfiles/transparent_window.py
+
+
+#set refresh rate
 exec_always --no-startup-id xrandr --output HDMI-0 --rate 144.00
 
 
