@@ -1,5 +1,8 @@
 local opt = vim.opt
 
+-- clipboard
+vim.api.nvim_set_option("clipboard", "unnamed")
+
 -- line numbers
 opt.relativenumber = true
 opt.number = true
@@ -17,6 +20,7 @@ opt.wrap = false
 opt.ignorecase = true
 opt.smartcase = true
 
+-- clipboard
 -- cursor line
 opt.cursorline = true
 
