@@ -48,7 +48,6 @@ keymap.set("n", "<leader>rs", ":LspRestart<CR>") -- mapping to restart lsp if ne
 
 --harpoon
 keymap.set("n", "<leader>t1", ':lua require("harpoon.term").gotoTerminal(1)<cr>i')
-keymap.set("t", "<leader>x", "exit<CR><CR>")
 
 -- jabs
 keymap.set("n", "<leader>j", ":JABSOpen<CR>", { desc = "view open buffers [jabs]" })

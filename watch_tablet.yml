@@ -1,0 +1,6 @@
+input_device: /dev/input/event8
+modes:
+  tablet:
+    - corekeyboard
+  laptop:
+    - pkill corekeyboard
