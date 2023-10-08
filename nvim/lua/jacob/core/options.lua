@@ -1,7 +1,7 @@
 local opt = vim.opt
 
 -- clipboard
-vim.api.nvim_set_option("clipboard", "unnamed")
+vim.api.nvim_set_option("clipboard", "unnamedplus")
 
 -- line numbers
 opt.relativenumber = true
