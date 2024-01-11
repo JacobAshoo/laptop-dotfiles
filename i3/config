@@ -116,7 +116,6 @@ bindsym $mod+Shift+n gaps inner current minus 5
 #TODO
 
 #lofi music
-bindsym $mod+a exec --no-startup-id firefox https://www.youtube.com/watch?v=jfKfPfyJRdk
 exec_always --no-startup-id xrandr --output HDMI-0 --rate 144.00
 
 #transparent window
