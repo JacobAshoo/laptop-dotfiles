@@ -11,6 +11,7 @@ alias transparent='python /home/jacob/dotfiles/transparent_window.py'
 alias ls='lsd'
 alias get_idf=". ~/esp/esp-idf/export.sh"
 alias fml="sudo systemctl restart display-manager"
+alias syu="sudo pacman -Syu"
 
 PS1='[\u@\h \W]\$ '
 
