@@ -13,7 +13,7 @@ alias get_idf=". ~/esp/esp-idf/export.sh"
 alias fml="sudo systemctl restart display-manager"
 alias syu="sudo pacman -Syu"
 alias open="xdg-open"
-
+alias cl="clear && ls"
 PS1='[\u@\h \W]\$ '
 
 eval "$(thefuck --alias)"
