@@ -23,3 +23,12 @@ jcar() { javac $1 && java $1 ; }
 
 #cd then lsd
 cds() { cd "$@" && lsd; }
+
+#compress dir in parallel
+tarxz() {
+  if [[ $# -ne 2 ]]; then
+    echo "Usage: tarxz <folder> <output.tar.xz>"
+    return 1
+  fi
+  tar -c "$1" | xz -T0 -z > "$2"
+}
