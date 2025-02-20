@@ -30,5 +30,10 @@ tarxz() {
     echo "Usage: tarxz <folder> <output.tar.xz>"
     return 1
   fi
-  tar -c "$1" | xz -T0 -z > "$2"
+
+  folder_size=$(du -sb "$1" | awk '{print $1}')  # Get total folder size in bytes
+
+  tar -cf - "$1" | pv -s "$folder_size" -pterb -i 0.5 | pixz  > "$2"
 }
+
+
