@@ -2,7 +2,7 @@ local get_hex = require("cokeline/utils").get_hex
 local mappings = require("cokeline/mappings")
 
 local comments_fg = get_hex("Comment", "fg")
-local errors_fg = get_hex("DiagnosticError", "fg")
+--local errors_fg = get_hex("DiagnosticError", "fg")
 local warnings_fg = get_hex("DiagnosticWarn", "fg")
 
 local red = vim.g.terminal_color_1
@@ -84,9 +84,7 @@ local components = {
 				or ""
 		end,
 		fg = function(buffer)
-			return (buffer.diagnostics.errors ~= 0 and errors_fg)
-				or (buffer.diagnostics.warnings ~= 0 and warnings_fg)
-				or nil
+			return (buffer.diagnostics.errors ~= 0) or (buffer.diagnostics.warnings ~= 0 and warnings_fg) or nil
 		end,
 		truncation = { priority = 1 },
 	},
