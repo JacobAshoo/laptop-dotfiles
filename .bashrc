@@ -14,6 +14,8 @@ alias fml="sudo systemctl restart display-manager"
 alias syu="sudo pacman -Syu"
 alias open="xdg-open"
 alias cl="clear && ls"
+alias bigback="pacman -Qi | egrep '^(Name|Installed)' | cut -f2 -d':' | paste - - | column -t | sort -nrk 2 | grep MiB | less"
+alias gcd="cd | git rev-parse --show-toplevel"
 PS1='[\u@\h \W]\$ '
 
 eval "$(thefuck --alias)"
@@ -35,5 +37,17 @@ tarxz() {
 
   tar -cf - "$1" | pv -s "$folder_size" -pterb -i 0.5 | pixz  > "$2"
 }
-
+function Sudo {
+        local firstArg=$1
+        if [ $(type -t $firstArg) = function ]
+        then
+                shift && command sudo bash -c "$(declare -f $firstArg);$firstArg $*"
+        elif [ $(type -t $firstArg) = alias ]
+        then
+                alias sudo='\sudo '
+                eval "sudo $@"
+        else
+                command sudo "$@"
+        fi
+}
 
