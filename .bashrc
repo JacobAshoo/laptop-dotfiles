@@ -15,6 +15,7 @@ alias syu="sudo pacman -Syu"
 alias open="xdg-open"
 alias cl="clear && ls"
 alias bigback="pacman -Qi | egrep '^(Name|Installed)' | cut -f2 -d':' | paste - - | column -t | sort -nrk 2 | grep MiB | less"
+alias gcd="cd | git rev-parse --show-toplevel"
 PS1='[\u@\h \W]\$ '
 
 eval "$(thefuck --alias)"
