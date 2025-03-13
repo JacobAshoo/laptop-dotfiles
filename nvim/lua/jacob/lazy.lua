@@ -12,9 +12,14 @@ vim.opt.rtp:prepend(lazypath)
 
 
 require("lazy").setup({
+  checker = {
+    enabled = true,
+    notify = false
+  },
   spec = {
     -- import your plugins
     { import = "jacob.plugins" },
+    { import = "jacob.plugins.lsp"}
   },
   -- Configure any other settings here. See the documentation for more details.
   -- colorscheme that will be used when installing plugins.
