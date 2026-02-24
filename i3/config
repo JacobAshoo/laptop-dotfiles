@@ -25,6 +25,9 @@ exec --no-startup-id xrandr --output eDP-1  --scale .8x.8
 #libinput-gestures
 exec --no-startup-id libinput-gestures -c /home/jacob/.config/libinput-gestures.conf
 
+exec --no-startup-id sudo touchegg
+
+
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec --no-startup-id light -A 5 
 bindsym XF86MonBrightnessDown exec --no-startup-id light -U 5 
